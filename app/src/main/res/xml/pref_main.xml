@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<CheckBoxPreference
+    android:defaultValue="true"
+    android:key="show_med1"
+    android:summaryOff="not Taken"
+    android:summaryOn="Taken"
+    android:title="Show Medicine"/>
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_med2"
+        android:summaryOff="not Taken"
+        android:summaryOn="Taken"
+        android:title="Show Medicine"/>
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="show_med3"
+        android:summaryOff="not Taken"
+        android:summaryOn="Taken"
+        android:title="Show Medicine"/>
+    <ListPreference
+        android:defaultValue="@color/red"
+        android:entries="@array/pref_color_option_labels"
+        android:entryValues="@array/pref_color_option_values"
+        android:key="@string/pref_color_key"
+        android:title="@string/pref_color_label"
+        />
+</PreferenceScreen>
