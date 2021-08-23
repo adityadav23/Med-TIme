@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.preference.CheckBoxPreference;
+import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -37,6 +38,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                 setPreferenceSummary(p, value);
 
             }
+
             Preference preference = findPreference(getString(R.string.pref_size_key));
             preference.setOnPreferenceChangeListener(this);
         }
@@ -58,6 +60,8 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                 listPreference.setSummary(listPreference.getEntries()[prefIndex]);
 
             }
+        }else if(p instanceof EditTextPreference){
+            p.setSummary(value);
         }
     }
     @Override
