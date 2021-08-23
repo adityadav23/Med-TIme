@@ -11,4 +11,6 @@
     <string name="pref_color_value_red">red</string>
     <string name="pref_color_value_pink">pink</string>
     <string name="pref_color_value_yellow">yellow</string>
+
+    <string name="pref_size_key">size</string>
 </resources>
