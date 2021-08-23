@@ -3,15 +3,15 @@
     <array name ="pref_color_option_labels">
 
         <item>@string/pref_color_label_red</item>
-        <item>@string/pref_color_label_pink</item>
         <item>@string/pref_color_label_yellow</item>
+        <item>@string/pref_color_label_pink</item>
 
     </array>
     <array name="pref_color_option_values">
 
-        <item>#FF0000</item>
-        <item>#FFCE22</item>
-        <item>#FFCEDB</item>
+        <item>"#FF0000"</item>
+        <item>"#FFCE22"</item>
+        <item>"#FFCEDB"</item>
 
     </array>
 </resources>

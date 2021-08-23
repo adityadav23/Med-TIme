@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory
+      android:title="Choose Medicine Taken">
     <CheckBoxPreference
     android:defaultValue="true"
     android:key="show_med1"
@@ -19,11 +21,14 @@
         android:summaryOff="not Taken"
         android:summaryOn="Taken"
         android:title="Show Medicine"/>
-<ListPreference
+  </PreferenceCategory>
+<PreferenceCategory
+    android:title="Choose Color">
+    <ListPreference
     android:defaultValue="#FF0000"
     android:key="color"
     android:title="@string/pref_color_label"
     android:entries="@array/pref_color_option_labels"
     app:entryValues="@array/pref_color_option_values"/>
-
+</PreferenceCategory>
 </PreferenceScreen>

@@ -40,26 +40,27 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     // COMPLETED (1) Change the name of default setup to setupSharedPreferences
     private void setupSharedPreferences() {
-        // Get all of the values from shared preferences to set it up
-        // COMPLETED (2) Get a reference to the default shared preferences from the PreferenceManager class
+
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+      // To save the state after the recreation of activity
+        Med1Visible(sharedPreferences.getBoolean("show_med1",true));
+        Med2Visible(sharedPreferences.getBoolean("show_med2",true));
+        Med3Visible(sharedPreferences.getBoolean("show_med3",true));
+        setColor(sharedPreferences.getString("color","#FF0000"));
 
-     //   loadColorSharedPreferences(sharedPreferences);
+        //Registering preference
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
 
     }
 
 
-//    public void loadColorSharedPreferences(SharedPreferences sharedPreferences){
-//        String color_id =sharedPreferences.getString(getString(R.string.pref_color_key),
-//                getString(R.string.pref_color_value_pink));
-//
-//        setColor(color_id);
-//   }
-   private void setColor(String id){
 
-        mMed1TextView.setTextColor(Color.parseColor(id));
+   private void setColor(String colorString){
+
+       mMed1TextView.setTextColor(Color.parseColor(colorString));
+       mMed2TextView.setTextColor(Color.parseColor(colorString));
+       mMed3TextView.setTextColor(Color.parseColor(colorString));
 
    }
 
