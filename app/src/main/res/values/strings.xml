@@ -5,14 +5,10 @@
     <string name="pref_color_label_red">Red</string>
     <string name="pref_color_label_pink">Pink</string>
     <string name="pref_color_label_yellow">Yellow</string>
-    <string name="pref_color_values">color</string>
+    <string name="pref_color_values">colors</string>
 
     <string name="pref_color_key" translatable="false">color</string>
-    <string name="pref_color_value_red" translatable="false">red</string>
-    <string name="pref_color_value_pink" translatable="false">pink</string>
-    <string name="pref_color_value_yellow" translatable="false">yellow</string>
-
-
-
-
+    <string name="pref_color_value_red">red</string>
+    <string name="pref_color_value_pink">pink</string>
+    <string name="pref_color_value_yellow">yellow</string>
 </resources>

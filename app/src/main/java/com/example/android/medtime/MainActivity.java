@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         mMed1TextView=findViewById(R.id.tv_med1);
         mMed2TextView = findViewById(R.id.tv_med2);
         mMed3TextView = findViewById(R.id.tv_med3);
+
+
         setupSharedPreferences();
     }
 
@@ -40,20 +43,25 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         // Get all of the values from shared preferences to set it up
         // COMPLETED (2) Get a reference to the default shared preferences from the PreferenceManager class
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        // COMPLETED (3) Get the value of the show_bass checkbox preference and use it to call setShowBass
-        Med1Visible(sharedPreferences.getBoolean("show_med1",true));
-        Med2Visible(sharedPreferences.getBoolean("show_med2",true));
-        Med3Visible(sharedPreferences.getBoolean("show_med3",true));
 
-   //     loadColorSharedPreferences(sharedPreferences);
+
+     //   loadColorSharedPreferences(sharedPreferences);
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
+
     }
 
-//
+
 //    public void loadColorSharedPreferences(SharedPreferences sharedPreferences){
-//        mMed1TextView.setBackgroundColor(sharedPreferences.getInt(getString(R.string.pref_color_key),
-//                                     getResources().getColor(R.color.red)));
-//    }
+//        String color_id =sharedPreferences.getString(getString(R.string.pref_color_key),
+//                getString(R.string.pref_color_value_pink));
+//
+//        setColor(color_id);
+//   }
+   private void setColor(String id){
+
+        mMed1TextView.setTextColor(Color.parseColor(id));
+
+   }
 
     private void Med1Visible(boolean b){
         if(b){
@@ -107,6 +115,10 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         } else if (key.equals("show_med3")) {
             Med3Visible(sharedPreferences.getBoolean(key, true));
+        }
+        else if(key.equals("color")){
+          setColor(sharedPreferences.getString(key, "#FF0000"));
+
         }
     }
 }

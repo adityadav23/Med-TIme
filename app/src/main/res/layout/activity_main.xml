@@ -17,7 +17,8 @@
         android:text="Medicine 1"
         android:textSize="40sp"
         android:textAlignment="center"
-        android:background="@color/purple_200"/>
+        android:background="@color/purple_200"
+        />
     <TextView
        android:id="@+id/tv_med2"
         android:layout_width="match_parent"

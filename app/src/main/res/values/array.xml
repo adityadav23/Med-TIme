@@ -9,9 +9,9 @@
     </array>
     <array name="pref_color_option_values">
 
-        <item>@color/red</item>
-        <item>@color/pink</item>
-        <item>@color/yellow</item>
+        <item>#FF0000</item>
+        <item>#FFCE22</item>
+        <item>#FFCEDB</item>
 
     </array>
 </resources>
