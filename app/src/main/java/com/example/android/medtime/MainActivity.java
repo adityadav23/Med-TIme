@@ -49,11 +49,20 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         Med3Visible(sharedPreferences.getBoolean("show_med3",true));
         setColor(sharedPreferences.getString("color","#FF0000"));
 
+        loadSizeFromPreference(sharedPreferences);
         //Registering preference
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
 
     }
 
+    private void loadSizeFromPreference(SharedPreferences sharedPreferences){
+        float size = Float.parseFloat(sharedPreferences.getString("size", "15"));
+        setSize(size);
+    }
+
+    private void setSize(float i){
+        mMed1TextView.setTextSize(i);
+    }
 
 
    private void setColor(String colorString){
@@ -120,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         else if(key.equals("color")){
           setColor(sharedPreferences.getString(key, "#FF0000"));
 
+        }else if(key.equals("size")){
+            loadSizeFromPreference(sharedPreferences);
         }
     }
 }

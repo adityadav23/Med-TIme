@@ -31,4 +31,11 @@
     android:entries="@array/pref_color_option_labels"
     app:entryValues="@array/pref_color_option_values"/>
 </PreferenceCategory>
+  <PreferenceCategory
+    android:title="Choose Size">
+      <EditTextPreference
+        android:title="Choose Size"
+        android:key="size"
+        android:defaultValue="20"/>
+  </PreferenceCategory>
 </PreferenceScreen>
